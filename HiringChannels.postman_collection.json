@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "c5ad3f71-774b-4b3b-b4ed-da82a2e438d7",
+		"name": "HiringChannels",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Engineers",
+			"item": [
+				{
+					"name": "engineers / login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ayu123\",\r\n    \"password\": \"12345\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/getAll?orderBy=DESC&order=name",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"getAll"
+							],
+							"query": [
+								{
+									"key": "page_size",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "orderBy",
+									"value": "DESC"
+								},
+								{
+									"key": "order",
+									"value": "name"
+								},
+								{
+									"key": "search",
+									"value": "developer",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / fine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/find/119",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"find",
+								"119"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "dsa",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "swa1@gmai.com",
+									"description": "ex. jhon@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456WWW&a",
+									"description": "upcase, lowcase, number, spesial char,min 8",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "sdaAsadsjkk1",
+									"description": "upcase, lowcase, not space, min 8",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"register"
+							],
+							"query": [
+								{
+									"key": "check_in",
+									"value": "2030-04-16",
+									"disabled": true
+								},
+								{
+									"key": "check_out",
+									"value": "2030-04-17",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "f",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "e",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "skill",
+									"value": "d",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "c",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "dateofbirth",
+									"value": "b",
+									"description": "(not empty)",
+									"type": "text"
+								},
+								{
+									"key": "phonenumber",
+									"value": "a",
+									"description": "(not empty)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/update/119",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"update",
+								"119"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / uploadimage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/USER/Pictures/logo/Icon-144.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/uploadimage/118",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"uploadimage",
+								"118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engineers / delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/engineers/delete/118",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"engineers",
+								"delete",
+								"118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enginners / refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh_token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTkzMzk3MjYsInJlZnJlc2hfdXVpZCI6Ijk4NmUzZjI0LTViMWMtNDcwYy1iMDE4LTUwNDgyODM4OGUzNCIsInVzZXJfaWQiOjR9.UI-6FXEOg7baxlIG_jDUe0IkH8hUs91P4eV5Oe2qGk8\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/refresh",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjA3NzgyYjQ4LTA3YTYtNDEwNi1hOWNhLTc5ZTE2NzkxY2YxNyIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYxOTI1NDE2OCwidXNlcl9pZCI6NH0.Ke_i12IfuJ1lXJaxkemrK0nAsvdd26D-9QaXJvp_KiE",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.variables.get(\"variable_key\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
